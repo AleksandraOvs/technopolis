@@ -1,4 +1,3 @@
-
 <?php
 add_action( 'after_setup_theme', 'set_color_palette' );
  
