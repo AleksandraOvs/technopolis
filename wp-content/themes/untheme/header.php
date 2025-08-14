@@ -51,6 +51,10 @@
 						endif;
 						?>
 
+						<div class="sign">
+							<img src="<?php echo get_stylesheet_directory_uri()?>/images/svg/sign.svg" alt="Технологии в ногу со временем">
+						</div>
+
 					</div>
 					<div class="header-right">
 						<?php get_template_part('template-parts/messengers') ?>

@@ -846,8 +846,8 @@ textarea {
 
 .site-branding {
 	display: flex;
-	flex-direction: column;
-	gap: 0;
+	flex-direction: row;
+	gap: 20px;
 	align-items: center;
 }
 
@@ -1721,6 +1721,12 @@ a.custom-logo-link img {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+@media (max-width: 992px){
+	.sign{
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
