@@ -1,4 +1,4 @@
-<section class="contacts-section">
+<section class="contacts-section" id="contacts">
     <div class="fixed-container">
         <h3 class="title">Контакты</h3>
 
