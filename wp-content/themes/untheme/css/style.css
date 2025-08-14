@@ -3903,7 +3903,7 @@ figure.wp-block-image {
 
     .contact-link {
         width: 40px;
-        height: auto;
+        /* height: auto; */
     }
 
     footer.site-footer .fixed-container ul li p,
