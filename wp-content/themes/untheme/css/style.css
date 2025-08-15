@@ -3871,17 +3871,17 @@ figure.wp-block-image {
         flex-direction: column;
     }
 
-    footer.site-footer .fixed-container ul li img {
+    /* footer.site-footer .fixed-container ul li img {
         display: none;
-    }
+    } */
 
-    .site-footer__right .contacts-list li.contacts-list__item:not(:last-child) {
+    /* .site-footer__right .contacts-list li.contacts-list__item:not(:last-child) {
         padding-right: 0;
         position: relative;
         padding-bottom: 10px;
-    }
+    } */
 
-    .site-footer__right .contacts-list li.contacts-list__item:not(:last-child)::after {
+    /* .site-footer__right .contacts-list li.contacts-list__item:not(:last-child)::after {
         content: '';
         width: 30px;
         height: 1px;
@@ -3890,7 +3890,7 @@ figure.wp-block-image {
         right: unset;
         bottom: 0;
         left: calc(50% - 15px);
-    }
+    } */
 
     .site-footer__right .contacts-list .contacts-list__item .contact-content {
         width: 100%;
