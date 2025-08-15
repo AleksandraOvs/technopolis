@@ -47,25 +47,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Изменение хедера при скролле
 
-    // if (window.innerWidth < 1024) {
-    //     const headerFront = document.querySelector('.site-header');
-    //     const headerChange = () => {
-    //         const
-    //             mainBlock = document.querySelector('body');
+    if (window.innerWidth >= 1024) {
+        const headerFront = document.querySelector('.site-header');
+        const headerChange = () => {
+            const
+                mainBlock = document.querySelector('body');
 
 
-    //         window.addEventListener('scroll', () => {
-    //             if (-mainBlock.getBoundingClientRect().top > 100) {
-    //                 headerFront.classList.add('header-scroll');
+            window.addEventListener('scroll', () => {
+                if (-mainBlock.getBoundingClientRect().top > 100) {
+                    headerFront.classList.add('header-scroll');
 
-    //             } else {
-    //                 headerFront.classList.remove('header-scroll');
-    //             }
-    //         })
+                } else {
+                    headerFront.classList.remove('header-scroll');
+                }
+            })
 
-    //     }
-    //     headerChange();
-    // }
+        }
+        headerChange();
+    }
     //плавный скролл
 
     function smoothScrollToElement(selector, duration = 700) {
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const element = document.scrollingElement || document.documentElement;
         const start = element.scrollTop;
-        const targetTop = target.getBoundingClientRect().top + start;
+        const targetTop = target.getBoundingClientRect().top + start - 160;
         const change = targetTop - start;
         const startTime = performance.now();
 
@@ -260,23 +260,3 @@ document.addEventListener('DOMContentLoaded', function () {
     // phoneLink.innerHTML = `${firstPart}<span class="highlight-last-seven">${lastSeven}</span>`;
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const headerFront = document.querySelector('.site-header');
-
-    if (!headerFront) return; // если шапка не найдена — выходим
-
-    // Функция проверки скролла
-    const onScroll = () => {
-        if (window.scrollY > 100) {
-            headerFront.classList.add('header-scroll');
-        } else {
-            headerFront.classList.remove('header-scroll');
-        }
-    };
-
-    // Запускаем только для экранов меньше 1024px
-    if (window.innerWidth < 480) {
-        window.addEventListener('scroll', onScroll);
-        onScroll(); // проверка при загрузке страницы
-    }
-});
