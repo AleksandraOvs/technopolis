@@ -281,6 +281,10 @@ ul .header-top__contacts__item a img {
     text-transform: uppercase;
 }
 
+.slide-heading h1 {
+  font-size: 2.4vw;
+}
+
 .slide-heading span {
     color: #fff;
     display: block;
