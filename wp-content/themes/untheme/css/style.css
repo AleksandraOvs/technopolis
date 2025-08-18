@@ -283,6 +283,7 @@ ul .header-top__contacts__item a img {
 
 .slide-heading h1 {
   font-size: 2.4vw;
+  color: var(--black);
 }
 
 .slide-heading span {
