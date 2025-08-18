@@ -6,7 +6,6 @@
  *
  * @package untheme
  */
-
 ?>
 
 <section class="no-results not-found">
