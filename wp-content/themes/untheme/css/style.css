@@ -62,13 +62,25 @@ h2.page-title {
     font-size: 38px;
 }
 
-h3 {
+/* h3 {
     font-size: 36px;
     color: var(--main);
     text-transform: uppercase;
     font-weight: 500;
     line-height: 140%;
     margin-bottom: 10px;
+} */
+
+h3{
+    font-size: 38px;
+    line-height: 140%;
+    color: var(--black);
+    margin: 0;
+    margin-bottom: 0px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 h3.title {

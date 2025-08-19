@@ -28,7 +28,7 @@ get_header();
 					<?php echo site_breadcrumbs(); ?>
 				</ul>
 				<?php
-				the_title('<h2 class="page-title">', '</h2>');
+				the_title('<h1 class="page-title">', '</h1>');
 				?>
 			</div>
 		</header><!-- .page-header -->
