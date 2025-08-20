@@ -668,7 +668,7 @@ section.section-about img.section-background {
 }
 
 .accent-text {
-    font-weight: 700;
+    /* font-weight: 700; */
     line-height: 140%;
     position: relative;
     padding-left: 40px;
