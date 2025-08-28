@@ -38,7 +38,7 @@
             </div>
         <?php endif; ?>
 
-        <div class="accent-text">
+        <div style="margin-top: 40px;" class="accent-text">
             <h3>Выполненные работы:</h3>
             <?php if ($object_works): ?>
                 <div class="project__works"><?php echo $object_works ?></div>
