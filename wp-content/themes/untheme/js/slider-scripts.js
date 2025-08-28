@@ -68,8 +68,6 @@ const swiperTestim = new Swiper('.testimonials-slider', {
   //loop: true,
 });
 
-
-
 const projectSwiper = new Swiper('.project-slider', {
   slidesPerView: 3,
   // navigation: {
