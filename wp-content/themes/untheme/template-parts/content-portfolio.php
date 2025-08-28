@@ -39,10 +39,7 @@
         <?php endif; ?>
 
         <div class="accent-text">
-            <?php if ($object_name): ?>
-                <h2 class="project__title"><?php echo $object_name ?></h2>
-            <?php endif; ?>
-
+            <h3>Выполненные работы:</h3>
             <?php if ($object_works): ?>
                 <div class="project__works"><?php echo $object_works ?></div>
             <?php endif; ?>
