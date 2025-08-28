@@ -222,7 +222,8 @@ ul .header-top__contacts__item a img {
     left: 0;
 }
 
-.hero-slider .slider-pagination {
+.hero-slider .slider-pagination,
+.slider-pagination {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -232,7 +233,8 @@ ul .header-top__contacts__item a img {
     height: auto;
 }
 
-.hero-slider .slider-pagination span {
+.hero-slider .slider-pagination span,
+.slider-pagination span {
     background: var(--black);
     transition: all .5s linear;
 }
@@ -1431,6 +1433,44 @@ section.section-about img.section-background {
     height: 100%;
     object-fit: contain;
     object-position: center;
+}
+
+.swiper.project__slider .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.swiper.project__slider .swiper-wrapper .swiper-slide a {
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.swiper.project__slider .swiper-wrapper .swiper-slide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project__image-desc {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    padding: 15px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    color: #fff;
+}
+
+.swiper.project__slider {
+    padding-bottom: 30px;
 }
 
 /*CONTACTS*/

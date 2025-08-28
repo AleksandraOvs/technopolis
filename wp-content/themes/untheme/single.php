@@ -53,8 +53,8 @@ get_header();
 		</div>
 
 	</section>
-	
-	<?php get_template_part('template-parts/messengers-block'); ?>
+
+	<?php get_template_part('template-parts/contacts-section'); ?>
 </main><!-- #main -->
 
 <?php

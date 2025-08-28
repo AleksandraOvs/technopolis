@@ -12,7 +12,7 @@ new Swiper('.hero-slider', {
   // },
 });
 
-const portfolioSwiper = new Swiper('.projects-slider', {
+const portfolioSwiper = new Swiper('.project__slider', {
   slidesPerView: 1,
   spaceBetween: 40,
   loop: true,
