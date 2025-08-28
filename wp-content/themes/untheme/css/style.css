@@ -4112,6 +4112,11 @@ figure.wp-block-image {
         text-align: left;
     }
 
+    .contacts-section {
+        position: relative;
+        background: none;
+    }
+
 }
 
 .wp-block-media-text__content p {
