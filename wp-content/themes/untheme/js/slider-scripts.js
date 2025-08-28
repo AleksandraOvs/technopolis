@@ -71,10 +71,21 @@ const swiperTestim = new Swiper('.testimonials-slider', {
 
 
 const projectSwiper = new Swiper('.project-slider', {
-  slidesPerView: 1,
+  slidesPerView: 3,
   // navigation: {
   //   nextEl: '.slider-testim-next',
   //   prevEl: '.slider-testim-prev',
   // },
   loop: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      loop: false,
+
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    }
+  }
 });
