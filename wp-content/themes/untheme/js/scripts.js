@@ -24,6 +24,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 // переход по ссылке произойдёт по умолчанию
             });
         });
+    } else {
+        const parents = document.querySelectorAll('.menu-item-has-children');
+
+        parents.forEach(parent => {
+            const link = parent.querySelector('a');
+            const submenu = parent.querySelector('.dropdown-menu');
+
+            if (!link || !submenu) return;
+
+            // Скрываем подменю изначально
+            submenu.style.display = 'none';
+
+            link.addEventListener('click', (e) => {
+                // если у ссылки есть подменю — блокируем переход
+                if (submenu) {
+                    e.preventDefault();
+
+                    // Закрываем все открытые подменю
+                    document.querySelectorAll('.menu-item-has-children .dropdown-menu')
+                        .forEach(menu => {
+                            if (menu !== submenu) {
+                                menu.style.display = 'none';
+                            }
+                        });
+
+                    // Переключаем текущее
+                    submenu.style.display = submenu.style.display === 'grid' ? 'none' : 'grid';
+                }
+            });
+        });
     }
 
     if (window.innerWidth >= 1240) {
@@ -114,59 +144,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // кнопка вверх
-const upArrow = document.querySelector('.arrow-up');
+    const upArrow = document.querySelector('.arrow-up');
 
 
-function arrowUp() {
-    
-    if (upArrow) {
-    upArrow.addEventListener('click', (e) => {
-        e.preventDefault();
-        smoothScrollToTop(800);
-    });
-}
+    function arrowUp() {
 
-    // const arrow = document.querySelector('.arrow-up');
-    if (!upArrow) return; // если кнопка не найдена — выходим
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) { 
-            upArrow.classList.add('show');
-        } else {
-            upArrow.classList.remove('show');
+        if (upArrow) {
+            upArrow.addEventListener('click', (e) => {
+                e.preventDefault();
+                smoothScrollToTop(800);
+            });
         }
-    });
-}
 
-arrowUp();
+        // const arrow = document.querySelector('.arrow-up');
+        if (!upArrow) return; // если кнопка не найдена — выходим
 
-// Универсальный плавный скролл к верху
-function smoothScrollToTop(duration = 700) {
-    const element = document.scrollingElement || document.documentElement;
-    const start = element.scrollTop;
-    const change = -start; 
-    const startTime = performance.now();
-
-    function easeInOutQuad(t) {
-        return t < 0.5
-            ? 2 * t * t
-            : -1 + (4 - 2 * t) * t;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                upArrow.classList.add('show');
+            } else {
+                upArrow.classList.remove('show');
+            }
+        });
     }
 
-    function animateScroll(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easedProgress = easeInOutQuad(progress);
+    arrowUp();
 
-        element.scrollTop = start + change * easedProgress;
+    // Универсальный плавный скролл к верху
+    function smoothScrollToTop(duration = 700) {
+        const element = document.scrollingElement || document.documentElement;
+        const start = element.scrollTop;
+        const change = -start;
+        const startTime = performance.now();
 
-        if (elapsed < duration) {
-            requestAnimationFrame(animateScroll);
+        function easeInOutQuad(t) {
+            return t < 0.5
+                ? 2 * t * t
+                : -1 + (4 - 2 * t) * t;
         }
-    }
 
-    requestAnimationFrame(animateScroll);
-}
+        function animateScroll(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeInOutQuad(progress);
+
+            element.scrollTop = start + change * easedProgress;
+
+            if (elapsed < duration) {
+                requestAnimationFrame(animateScroll);
+            }
+        }
+
+        requestAnimationFrame(animateScroll);
+    }
     //анимация при скролле
 
     function onEntry(entry) {

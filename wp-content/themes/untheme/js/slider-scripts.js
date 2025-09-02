@@ -23,15 +23,6 @@ const portfolioSwiper = new Swiper('.project__slider', {
     el: '.slider-pagination',
     clickable: true,
   },
-  // navigation: {
-  // nextEl: '.portfolio-slider__button-next',
-  // prevEl: '.portfolio-slider__button-prev',
-  // lockClass: 'hide-navi'
-  //  },
-  // navigation: {
-  //   nextEl: '.slider-projects-next',
-  //   prevEl: '.slider-projects-prev',
-  // },
   breakpoints: {
     1024: {
       slidesPerView: 3,

@@ -11,8 +11,8 @@ get_header();
 					<?php echo site_breadcrumbs(); ?>
 				</ul>
 				<?php
-                post_type_archive_title('<h2 class="page-title">', '</h2>');
-                ?>
+				post_type_archive_title('<h2 class="page-title">', '</h2>');
+				?>
 			</div>
 
 		</header><!-- .page-header -->
@@ -20,20 +20,18 @@ get_header();
 		<div class="fixed-container">
 
 			<?php
-			// Получаем все термины таксономии 'category' (или свою таксономию, если есть)
 			$all_terms = get_terms(array(
 				'taxonomy'   => 'projects_category',
-				'hide_empty' => false, // Чтобы получить все категории, включая пустые
+				'hide_empty' => false,
 			));
 
 			//print_r($all_terms);
 
-			// Отфильтровываем только те категории, в которых есть записи типа 'works'
 			$terms = array();
 
 			if (! empty($all_terms) && ! is_wp_error($all_terms)) {
 				foreach ($all_terms as $term) {
-					// Подсчитываем сколько постов 'works' в категории $term->term_id
+
 					$count = new WP_Query(array(
 						'post_type'      => 'portfolio',
 						'posts_per_page' => 1,
