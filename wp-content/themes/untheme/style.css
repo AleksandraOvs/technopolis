@@ -1260,6 +1260,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 		opacity: 1;
 		transform: none;
 		overflow: scroll;
+		height: 90vh;
 	}
 
 	.header-nav ul {
@@ -1799,6 +1800,7 @@ a.custom-logo-link img {
 		gap: 20px;
 		padding-top: 10px;
 		flex-direction: column;
+		padding-bottom: 70px;
 	}
 
 	/* .header-bottom__services {
