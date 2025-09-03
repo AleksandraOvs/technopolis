@@ -19,7 +19,7 @@ get_header();
                     <?php echo site_breadcrumbs(); ?>
                 </ul>
                 <?php
-               // the_title('<h2 class="page-title">', '</h2>');
+                // the_title('<h2 class="page-title">', '</h2>');
                 post_type_archive_title('<h2 class="page-title">', '</h2>');
                 ?>
             </div>
@@ -27,9 +27,10 @@ get_header();
             <?php untheme_post_thumbnail(); ?>
 
         </header><!-- .page-header -->
-        <div class="content">
-            <?php the_content() ?>
-        </div>
+        <!-- <div class="content">
+            <?php //the_content() 
+            ?>
+        </div> -->
 
         <div class="fixed-container _services-page">
             <?php
