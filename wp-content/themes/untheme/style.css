@@ -1795,10 +1795,10 @@ a.custom-logo-link img {
 		transition: all .5s ease-in-out;
 	}
 
-
-	#menu-uslugi {
-		grid-template-columns: 1fr;
-		display: grid;
+	.header-bottom__services #menu-uslugi {
+		gap: 20px;
+		padding-top: 10px;
+		flex-direction: column;
 	}
 
 	/* .header-bottom__services {
