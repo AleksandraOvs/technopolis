@@ -1330,7 +1330,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 	.header-bottom__services #menu-uslugi {
 		gap: 0;
 		padding-top: 10px;
-		padding-bottom: 120px;
+		padding-bottom: 150px;
 	}
 
 	/* .dropdown-menu li a::before {
