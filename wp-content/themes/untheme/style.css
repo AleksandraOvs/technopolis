@@ -1251,10 +1251,15 @@ a.menu-toggle.open .bar:nth-child(3) {
 		font-weight: 600;
 	}
 
+	#menu-uslugi .menu-item-has-children>a:after {
+		content: none;
+	}
+
 	.header-bottom.open {
 		display: flex;
 		opacity: 1;
 		transform: none;
+		overflow: scroll;
 	}
 
 	.header-nav ul {
@@ -1300,8 +1305,9 @@ a.menu-toggle.open .bar:nth-child(3) {
 
 
 	.header-bottom__services #menu-uslugi {
-		gap: 10px;
-		flex-direction: column;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
 	}
 
 	#menu-uslugi li .dropdown-menu li a {
@@ -1845,10 +1851,10 @@ a.custom-logo-link img {
 	}
 
 	.header-nav ul {
-		gap: 0;
+		gap: 10px;
 		justify-content: flex-start;
 		flex-wrap: wrap;
-		flex-direction: column;
+		/* flex-direction: column; */
 		padding-bottom: 10px;
 		border-bottom: 1px solid #fff;
 	}

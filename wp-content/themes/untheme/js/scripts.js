@@ -24,37 +24,39 @@ document.addEventListener("DOMContentLoaded", () => {
                 // переход по ссылке произойдёт по умолчанию
             });
         });
-    } else {
-        const parents = document.querySelectorAll('.menu-item-has-children');
-
-        parents.forEach(parent => {
-            const link = parent.querySelector('a');
-            const submenu = parent.querySelector('.dropdown-menu');
-
-            if (!link || !submenu) return;
-
-            // Скрываем подменю изначально
-            submenu.style.display = 'none';
-
-            link.addEventListener('click', (e) => {
-                // если у ссылки есть подменю — блокируем переход
-                if (submenu) {
-                    e.preventDefault();
-
-                    // Закрываем все открытые подменю
-                    document.querySelectorAll('.menu-item-has-children .dropdown-menu')
-                        .forEach(menu => {
-                            if (menu !== submenu) {
-                                menu.style.display = 'none';
-                            }
-                        });
-
-                    // Переключаем текущее
-                    submenu.style.display = submenu.style.display === 'grid' ? 'none' : 'grid';
-                }
-            });
-        });
     }
+
+    // else {
+    //     const parents = document.querySelectorAll('.menu-item-has-children');
+
+    //     parents.forEach(parent => {
+    //         const link = parent.querySelector('a');
+    //         const submenu = parent.querySelector('.dropdown-menu');
+
+    //         if (!link || !submenu) return;
+
+    //         // Скрываем подменю изначально
+    //         submenu.style.display = 'none';
+
+    //         link.addEventListener('click', (e) => {
+    //             // если у ссылки есть подменю — блокируем переход
+    //             if (submenu) {
+    //                 e.preventDefault();
+
+    //                 // Закрываем все открытые подменю
+    //                 document.querySelectorAll('.menu-item-has-children .dropdown-menu')
+    //                     .forEach(menu => {
+    //                         if (menu !== submenu) {
+    //                             menu.style.display = 'none';
+    //                         }
+    //                     });
+
+    //                 // Переключаем текущее
+    //                 submenu.style.display = submenu.style.display === 'grid' ? 'none' : 'grid';
+    //             }
+    //         });
+    //     });
+    // }
 
     if (window.innerWidth >= 1240) {
         let navItemLength = document.querySelectorAll('nav .main-menu li').length;
