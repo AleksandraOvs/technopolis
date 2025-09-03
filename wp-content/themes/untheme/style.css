@@ -1818,6 +1818,10 @@ a.custom-logo-link img {
 
 @media (max-width: 576px) {
 
+	.slide-heading h1 {
+		font-size: 4vw;
+	}
+
 	.site-header .fixed-container {
 		align-items: center;
 	}
