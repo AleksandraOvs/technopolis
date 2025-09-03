@@ -1239,7 +1239,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 		z-index: 2;
 		opacity: 0;
 		transition: all .5s linear;
-		transform: translateY(-100%);
+		transform: translateY(-250%);
 	}
 
 	ul.menu li a:hover {
