@@ -1330,6 +1330,7 @@ a.menu-toggle.open .bar:nth-child(3) {
 	.header-bottom__services #menu-uslugi {
 		gap: 0;
 		padding-top: 10px;
+		padding-bottom: 120px;
 	}
 
 	/* .dropdown-menu li a::before {
@@ -1800,7 +1801,6 @@ a.custom-logo-link img {
 		gap: 20px;
 		padding-top: 10px;
 		flex-direction: column;
-		padding-bottom: 120px;
 	}
 
 	/* .header-bottom__services {
